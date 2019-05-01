@@ -1,0 +1,138 @@
+import java.util.Scanner;
+
+public class CincoTicketingSystemSprint2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	      // Scanner used for keyboard input
+	      Scanner sc = new Scanner (System.in);
+	      
+	      String selection;
+	      
+	      do
+	      {
+	         System.out.println("Cinco public transport ticketing system");
+	         System.out.println("--------------------------------------------");
+	         System.out.println();
+
+	         System.out.println("A - Purchase a new pep-pep ticket");
+	         System.out.println("B - Purchase travel pass using pep-pep ticket");
+	         System.out.println("C - Load credit on existing pep-pep ticket");
+	         System.out.println("X - Exit");
+	         System.out.println();
+	         System.out.print("Please enter your selection here: ");
+
+	         selection = sc.nextLine();
+	         
+	         // make menu selection processing case-insensitive
+	         selection = selection.toUpperCase();
+
+	         // process menu item selected above
+
+			switch (selection)
+	         {
+	            case "A":
+
+	               // code to buy Pep-Pep tickets with initial zero value for $8
+		            System.out.println("For cash payment, please add $8 in slot below");
+		            System.out.println("For card payment, please tap card to the right");
+		            break;
+
+	            case "B":
+	            	
+
+
+	            	String travelPass;
+	            	String travelPassType;
+	            	double passPrice;
+	            	double credit;
+	            	String HA = null;
+	            	String HB = null;
+	            	String DA = null;
+	            	String DB = null;
+	            	
+	            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
+	            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ */
+	                
+	   	         System.out.println("Select Travel Pass Type");
+		         System.out.println("--------------------------------------------");
+		         System.out.println();
+
+		         System.out.println("type 'HA' for 2 hours, Zone 1");
+		         System.out.println("type 'HB' for  2 hours, Zone 1 & Zone 2");
+		         System.out.println("type 'DA' for  All Day, Zone 1");
+		         System.out.println("type 'DB' for  All Day, Zone 1 & Zone 2");
+		         System.out.println();
+		         System.out.print("Please enter your Travel Pass Type here: ");
+
+		         travelPassType = sc.nextLine();
+		         
+		         System.out.print("Please enter credit available on your ticket: ");
+
+		         credit = sc.nextDouble();
+	            	
+		         /*Users need to have enough credit on their Pep-Pep ticket before they can 
+	            	 * purchase any travel passes. The prices of travel passes are as 
+	            	 * follows: 2 hour, zone 1: $3.50; 2 hour, zones 1 & 2: $6; All day, 
+	            	 * zone 1: $7; All day, zones 1 & 2: $12*/		         
+		         
+	                // determine applicable pass type and required credit
+	                if (travelPassType == HA && credit >= 3.5)
+	                {
+	                	passPrice = 3.50;
+	                }
+	                else if (travelPassType == HB && credit >= 6.0)
+	                {
+	                	passPrice = 6.00;
+	                }
+	                else if (travelPassType == DA && credit >= 7.0)
+	                {
+	                	passPrice = 7.00;
+	                }
+	         		else if (travelPassType == DB && credit >= 12.0)
+	         		{
+	         		    passPrice = 12.00;
+	         		}
+	                else // Price will be zero
+	                {
+	                	passPrice = 0.00;
+	   		         System.out.println("You have insufficient funds to purchase a travel pass");
+	                }
+	            	
+	            case "C":
+
+		               // code to load credit onto existing Pep-Pep tickets
+		               /*Pep-Pep tickets can only hold up to $100. 
+		               * Any attempt to add more than $100 credit causes an 
+		               * error message and the charge fails. Amounts to be 
+		               * credited to a Pep-Pep ticket must be in multiples of $5*/
+	            	
+			         System.out.println("Please enter amount you would like to credit your ticket: ");
+
+			         double addCredit = sc.nextDouble();     
+			         
+			         for(int i = 0 ; i < 100; i++) { //Loop from 0 to 100
+			             if(i % 5 == 0 ) //check the number is divisible by 5
+			              System.out.println(i); //print the number if it is divisible by 5
+			        }
+			         // research code to check if addCredit is in list created by for loop
+	            
+	            case "X":
+	               System.out.println("Exiting menu...");
+	               break;
+
+	            default:
+	               System.out.println("Error - Invalid menu selection!");
+
+	         }
+	         System.out.println();
+	      } while (!selection.equals("X"));
+	   
+
+		
+	}
+
+}
+
+
