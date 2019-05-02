@@ -9,6 +9,7 @@ public class CincoTicketingSystemSprint2 {
 	      Scanner sc = new Scanner (System.in);
 	      
 	      String selection;
+	      double credit = 0;
 	      
 	      do
 	      {
@@ -46,7 +47,6 @@ public class CincoTicketingSystemSprint2 {
 	            	String travelPass;
 	            	String travelPassType;
 	            	double passPrice;
-	            	double credit;
 	            	String HA = null;
 	            	String HB = null;
 	            	String DA = null;
@@ -113,26 +113,25 @@ public class CincoTicketingSystemSprint2 {
 			         double addCredit = sc.nextDouble();  
 				 
 				 
-				 /*
-			         if (addCredit % 5 == 0 & addCredit < 100) {
-			        	 System.out.println("Credit added");
+				if (addCredit % 5 == 0 & addCredit < 100) {
 			        	 
-			        	 credit += addCredit;
+			        	 credit = credit + addCredit;
 			        	 
-			        	 System.out.println(credit);
+			        	 System.out.println("total credit =" + credit);
 			        	
 			         }
 			         
-			         else { System.out.println("Credit not added");
+			         else { System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
 			         
-			         } */		
+			         
+			         } 	
 				 
 				 
-			         
+			         /*
 			         for(int i = 0 ; i < 100; i++) { //Loop from 0 to 100
 			             if(i % 5 == 0 ) //check the number is divisible by 5
 			              System.out.println(i); //print the number if it is divisible by 5
-			        }
+			        } */
 			         // research code to check if addCredit is in list created by for loop
 	            
 	            case "X":
