@@ -10,6 +10,7 @@ public class CincoTicketingSystemSprint2 {
 	      
 	      String selection;
 	      double credit = 0;
+	      int pepPepID = 0;
 	      
 	      do
 	      {
@@ -34,11 +35,43 @@ public class CincoTicketingSystemSprint2 {
 			switch (selection)
 	         {
 	            case "A":
-
+          	if (credit >= 8) {
+	            		
+	            		
+	            		System.out.println("Bought new pep-pep");
+	            		
+	            		credit = credit - 8;
+				//need loop through pep-pep ID's will research this another day and add more numbers to end of each
+				//peppep ticket variable to make new variables for each. increments etc
+	            		/* for(int i = 0 ; pepPepID[i] != i; i++) { 
+			            
+			              System.out.println(i);
+				
+	            			
+	            			int pepPepID[i+];
+	            			System.out.println("incremented ID");
+	            			
+	            		}
+				 } 
+				*/
+	            		
+	            		System.out.println("Your new balance is " + credit);
+	            		System.out.println("Your pep-pep ticket ID is " + pepPepID);
+	            		
+	            		
+	            	}
 	               // code to buy Pep-Pep tickets with initial zero value for $8
-		            System.out.println("For cash payment, please add $8 in slot below");
+	            	
+	            	else {
+			
+	            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
+		            System.out.println("For cash payment, please add $8 in slot below in multiples of $5");
 		            System.out.println("For card payment, please tap card to the right");
+			    
 		            break;
+			    
+		            }
+
 
 	            case "B":
 	            	
