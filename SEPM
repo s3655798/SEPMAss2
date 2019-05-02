@@ -117,7 +117,7 @@ public class CincoTicketingSystemSprint2 {
 			        	 
 			        	 credit = credit + addCredit;
 			        	 
-			        	 System.out.println("total credit =" + credit);
+			        	 System.out.println("total credit = " + credit);
 			        	
 			         }
 			         
