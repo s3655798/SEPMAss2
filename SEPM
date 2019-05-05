@@ -41,19 +41,9 @@ public class CincoTicketingSystemSprint2 {
 	            		System.out.println("Bought new pep-pep");
 	            		
 	            		credit = credit - 8;
-				//need loop through pep-pep ID's will research this another day and add more numbers to end of each
-				//peppep ticket variable to make new variables for each. increments etc
-	            		/* for(int i = 0 ; pepPepID[i] != i; i++) { 
-			            
-			              System.out.println(i);
 				
-	            			
-	            			int pepPepID[i+];
-	            			System.out.println("incremented ID");
-	            			
-	            		}
-				 } 
-				*/
+				// use arrays for unique ID's
+				
 	            		
 	            		System.out.println("Your new balance is " + credit);
 	            		System.out.println("Your pep-pep ticket ID is " + pepPepID);
