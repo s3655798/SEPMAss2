@@ -109,9 +109,9 @@ public class CincoTicketingSystemSprint2 {
 
 		         travelPassType = sc.nextLine();
 		         
-		         System.out.print("Please enter credit available on your ticket: ");
+		        // System.out.print("Please enter credit available on your ticket: ");
 
-		         credit = sc.nextDouble();
+		        // credit = sc.nextDouble();
 	            	
 		         /*Users need to have enough credit on their Pep-Pep ticket before they can 
 	            	 * purchase any travel passes. The prices of travel passes are as 
