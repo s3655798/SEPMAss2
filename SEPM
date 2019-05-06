@@ -78,8 +78,27 @@ public class CincoTicketingSystemSprint2 {
 		            System.out.println("For card payment, please tap card to the right");
 			    
 		            break;
-			    
+	            }
+			/****************************************************************************************   
 		            }
+
+			    private int uniqueID; //local unique ID variable
+     
+ 			   public Counter() {  //sets counter to 0
+ 			     this.uniqueID = 0;
+ 
+    			}
+   			 
+  			  public void increment(){
+      			  this.uniqueID ++;
+  			  }
+     
+ 			   public String toString(){
+			return c;
+			    }
+			
+			***************************************************************************************/
+
 
 			break;
 			
