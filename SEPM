@@ -64,7 +64,7 @@ public class CincoTicketingSystemSprint2 {
 				
 	            		
 	            		System.out.println("Your new balance is " + credit);
-	            		System.out.println("Your pep-pep ticket ID is " + pepPepID);
+	            		System.out.println("Your pep-pep ticket ID is " + pepPepId);
 	            		
 	            		
 	            	}
