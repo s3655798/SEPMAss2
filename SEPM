@@ -12,7 +12,7 @@ public class CincoTicketingSystemSprint2 {
 	      
 	      String selection;
 	      double credit = 0;
-	      int pepPepID = 0;
+	      int pepPepId = 0;
 	      String travelPass = "None";
 	      
 	      do
