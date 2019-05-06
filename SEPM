@@ -19,6 +19,7 @@ public class CincoTicketingSystemSprint2 {
 	      {
 	         System.out.println("Cinco public transport ticketing system");
 	         System.out.println("--------------------------------------------");
+		 System.out.println("Credit:" + credit);
 	         System.out.println();
 
 	         System.out.println("A - Purchase a new pep-pep ticket");
@@ -73,7 +74,7 @@ public class CincoTicketingSystemSprint2 {
 	            	else {
 			
 	            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
-		            System.out.println("For cash payment, please add $8 in slot below in multiples of $5");
+		            System.out.println("For cash payment, please credit atleast $8 in cash slot below");
 		            System.out.println("For card payment, please tap card to the right");
 			    
 		            break;
