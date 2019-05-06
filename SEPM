@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CincoTicketingSystemSprint2 {
 
@@ -11,6 +13,7 @@ public class CincoTicketingSystemSprint2 {
 	      String selection;
 	      double credit = 0;
 	      int pepPepID = 0;
+	      String travelPass = "None";
 	      
 	      do
 	      {
@@ -35,6 +38,21 @@ public class CincoTicketingSystemSprint2 {
 			switch (selection)
 	         {
 	            case "A":
+		    
+		    
+		    // for testing purposes i put this at the top of A but in future will go through all the checks for credit etc
+		    //Hash map for 
+		    	Map<String, String> pepMap = new HashMap<String, String>();
+	            	
+	            	
+	            	
+	            	pepMap.put("Id", Integer.toString(pepPepId)); //convert the pepPepId from int to string so it will actually store
+	            	pepMap.put("Credit", Double.toString(credit)); //same here
+	            	pepMap.put("Travel pass", travelPass); //I set this by default to "none"
+	            	System.out.print("pep-pep ticket:");
+	            	System.out.println(pepMap);
+	            	
+			
           	if (credit >= 8) {
 	            		
 	            		
@@ -67,7 +85,7 @@ public class CincoTicketingSystemSprint2 {
 	            	
 
 
-	            	String travelPass;
+	            	
 	            	String travelPassType;
 	            	double passPrice;
 	            	String HA = null;
