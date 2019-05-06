@@ -24,7 +24,7 @@ public class CincoTicketingSystemSprint2 {
 
 	         System.out.println("A - Purchase a new pep-pep ticket");
 	         System.out.println("B - Purchase travel pass using pep-pep ticket");
-	         System.out.println("C - Load credit on existing pep-pep ticket");
+	         System.out.println("C - Add credit");
 	         System.out.println("X - Exit");
 	         System.out.println();
 	         System.out.print("Please enter your selection here: ");
@@ -74,7 +74,7 @@ public class CincoTicketingSystemSprint2 {
 	            	else {
 			
 	            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
-		            System.out.println("For cash payment, please credit atleast $8 in cash slot below");
+		            System.out.println("Please first add credit. For cash payment, please credit atleast $8 in cash slot below");
 		            System.out.println("For card payment, please tap card to the right");
 			    
 		            break;
