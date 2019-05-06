@@ -81,7 +81,8 @@ public class CincoTicketingSystemSprint2 {
 			    
 		            }
 
-
+			break;
+			
 	            case "B":
 	            	
 
@@ -167,7 +168,8 @@ public class CincoTicketingSystemSprint2 {
 	   		         System.out.println("Travel pass price:" + passPrice);
 	                }
 	                
-	            	
+	            	break;
+			
 	            case "C":
 
 		               // code to load credit onto existing Pep-Pep tickets
