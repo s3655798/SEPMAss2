@@ -169,7 +169,34 @@ public class CincoTicketingSystemSprint2 {
 	                }
 	                
 	            	break;
-			
+
+/* superseded case B switch statement
+            	String travelPass;
+	            	String travelPassType = null;
+	                
+	            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
+	            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ */
+	                
+	                switch (travelPassType)
+	                {
+	                   case "hourA":
+	                	   travelPass = "2 hours - Zone 1";
+	                      break;
+	                      
+	                   case "hourB":
+	                	   travelPass = "2 hours - Zone 1 & Zone 2";
+	                      break;
+	                      
+	                   case "allDayA":
+	                	   travelPass = "All Day - Zone 1";
+	                      break;
+	                      
+	                   case "allDayB":
+	                	   travelPass = "All Day - Zone 1 & Zone 2";
+	                      break;
+	                }
+*/
+
 	            case "C":
 
 		               // code to load credit onto existing Pep-Pep tickets
