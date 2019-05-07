@@ -20,6 +20,13 @@ public class CincoTicketingSystemSprint2 {
 	      
 	      do
 	      {
+	      
+	      	pepMap.put("Id", Integer.toString(pepPepId)); //convert the pepPepId from int to string so it will actually store
+	        pepMap.put("Credit", Double.toString(credit)); //same here
+	        pepMap.put("Travel pass", travelPass); //I set this by default to "none"
+	        System.out.print("pep-pep ticket:");
+	        System.out.println(pepMap);
+		
 	         System.out.println("Cinco public transport ticketing system");
 	         System.out.println("--------------------------------------------");
 		 System.out.println("Credit:" + credit);
@@ -48,17 +55,9 @@ public class CincoTicketingSystemSprint2 {
 			Date dateobj = new Date();
 			System.out.println(date.format(dateobj));
 
-		    
-		    // for testing purposes i put this at the top of A but in future will go through all the checks for credit etc
-		    //Hash map for 
-		    	
 
 	            	
-	            	pepMap.put("Id", Integer.toString(pepPepId)); //convert the pepPepId from int to string so it will actually store
-	            	pepMap.put("Credit", Double.toString(credit)); //same here
-	            	pepMap.put("Travel pass", travelPass); //I set this by default to "none"
-	            	System.out.print("pep-pep ticket:");
-	            	System.out.println(pepMap);
+
 	            	
 			
 	          	if (credit >= 8) {
@@ -68,7 +67,7 @@ public class CincoTicketingSystemSprint2 {
 		            		
 		            		credit = credit - 8;
 					
-					// use arrays for unique ID's
+				
 					
 		            		
 		            		System.out.println("Your new balance is " + credit);
