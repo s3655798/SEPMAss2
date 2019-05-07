@@ -41,20 +41,7 @@ public class CincoTicketingSystemSprint2 {
 	         {
 	            case "A":
 		    
-		      //random 6 numbers
-	            
-	            	Random rnd = new Random();
-	            	int testId = 100000 + rnd.nextInt(900000);
-	            	System.out.println(testId);
-	            	
-		    //test if numbers already been used and then change id if it isnt
-	            	
-	            	while (testId == pepPepId) {
-	            		
-	            		testId = 100000 + rnd.nextInt(900000);
-	            	}
-	            	
-	            	pepPepId = testId;
+		    
 		    
 		    // for testing purposes i put this at the top of A but in future will go through all the checks for credit etc
 		    //Hash map for 
@@ -76,9 +63,19 @@ public class CincoTicketingSystemSprint2 {
 	            		
 	            		credit = credit - 8;
 				
-				// use arrays for unique ID's
-				
-	            		
+			//random 6 numbers for Id
+	            		Random rnd = new Random();
+	            		int testId = 100000 + rnd.nextInt(900000);
+	            		System.out.println(testId);            	
+		    //test if numbers already been used and then change id if it isnt
+	            		while (testId == pepPepId) {
+
+	            		testId = 100000 + rnd.nextInt(900000);
+
+	            	}
+
+	            	pepPepId = testId;
+
 	            		System.out.println("Your new balance is " + credit);
 	            		System.out.println("Your pep-pep ticket ID is " + pepPepId);
 	            		
