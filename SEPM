@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import java.text.SimpleDateFormat;
 
 public class CincoTicketingSystemSprint2 {
 
@@ -42,7 +43,11 @@ public class CincoTicketingSystemSprint2 {
 	         {
 	            case "A":
 		    
-		    
+		    	// get and print out todays date and store in date object
+		    	DateFormat date = new SimpleDateFormat("dd/MM/yy");
+			Date dateobj = new Date();
+			System.out.println(date.format(dateobj));
+
 		    
 		    // for testing purposes i put this at the top of A but in future will go through all the checks for credit etc
 		    //Hash map for 
@@ -100,7 +105,7 @@ public class CincoTicketingSystemSprint2 {
 			            break;
 		            }
 				/****************************************************************************************   
-			     **************** this methodology not used by started***********************************
+			     **************** this methodology not used but started***********************************
 			            
 
 				    private int uniqueID; //local unique ID variable
