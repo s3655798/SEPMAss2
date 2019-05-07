@@ -73,7 +73,7 @@ public class CincoTicketingSystemSprint2 {
 		            	}
 		               // code to buy Pep-Pep tickets with initial zero value for $8
 		            	
-		            	else {
+		            	else if {
 				
 		            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
 			            System.out.println("Please first add credit. For cash payment, please credit atleast $8 in cash slot below");
@@ -84,7 +84,7 @@ public class CincoTicketingSystemSprint2 {
 				         double addCredit = sc.nextDouble();  
 					 
 					 
-				         if (addCredit % 5 == 0 & addCredit < 100) {
+				     else if (addCredit % 5 == 0 & addCredit < 100) {
 				        	 
 				        	 credit = credit + addCredit;
 				        	 
