@@ -202,6 +202,8 @@ public class CincoTicketingSystemSprint2 {
 	   		   System.out.println("Travel pass price:" + passPrice);
 			   
 			   credit = credit - passPrice;
+			   
+			   System.out.println(pepMap);
 	                
 	            	break;
 
@@ -265,6 +267,8 @@ public class CincoTicketingSystemSprint2 {
 			              System.out.println(i); //print the number if it is divisible by 5
 			        } */
 			         // research code to check if addCredit is in list created by for loop
+				 
+				 System.out.println(pepMap);
 	            
 	            case "X":
 	               System.out.println("Exiting menu...");
