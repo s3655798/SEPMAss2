@@ -15,6 +15,7 @@ public class CincoTicketingSystemSprint2 {
 	      double credit = 0;
 	      int pepPepId = 0;
 	      String travelPass = "None";
+	      Map<String, String> pepMap = new HashMap<String, String>();
 	      
 	      do
 	      {
@@ -45,9 +46,8 @@ public class CincoTicketingSystemSprint2 {
 		    
 		    // for testing purposes i put this at the top of A but in future will go through all the checks for credit etc
 		    //Hash map for 
-		    	Map<String, String> pepMap = new HashMap<String, String>();
-	            	
-	            	
+		    	
+
 	            	
 	            	pepMap.put("Id", Integer.toString(pepPepId)); //convert the pepPepId from int to string so it will actually store
 	            	pepMap.put("Credit", Double.toString(credit)); //same here
