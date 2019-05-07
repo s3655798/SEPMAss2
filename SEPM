@@ -195,9 +195,13 @@ public class CincoTicketingSystemSprint2 {
 	                	passPrice = 0.00;
 
 	   		         System.out.println("You have insufficient funds to purchase a travel pass");
-	   		         System.out.println("Credit Available:" + credit);
-	   		         System.out.println("Travel pass price:" + passPrice);
+	   		   
 	                }
+			
+			   System.out.println("Credit Available:" + credit);
+	   		   System.out.println("Travel pass price:" + passPrice);
+			   
+			   credit = credit - passPrice;
 	                
 	            	break;
 
