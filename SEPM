@@ -194,7 +194,7 @@ public class CincoTicketingSystemSprint2 {
 	            	String travelPassType = null;
 	                
 	            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
-	            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ */
+	            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ 
 	                
 	                switch (travelPassType)
 	                {
