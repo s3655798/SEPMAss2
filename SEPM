@@ -140,7 +140,7 @@ public class CincoTicketingSystemSprint2 {
 	            	 * zone 1: $7; All day, zones 1 & 2: $12*/	
 			 
 			 // determine applicable pass type and required credit
-			if (travelPassType == HA && credit >= 3.5)
+			if (travelPassType.equals("HA") && credit >= 3.5)
 
 	                {
 
@@ -149,7 +149,7 @@ public class CincoTicketingSystemSprint2 {
 
 	                }
 
-	                else if (travelPassType == HB && credit >= 6.0)
+	                else if (travelPassType.equals("HB") && credit >= 6.0)
 
 	                {
 
@@ -158,7 +158,7 @@ public class CincoTicketingSystemSprint2 {
 
 	                }
 
-	                else if (travelPassType == DA && credit >= 7.0)
+	                else if (travelPassType.equals("DA") && credit >= 7.0)
 
 	                {
 
@@ -167,7 +167,7 @@ public class CincoTicketingSystemSprint2 {
 
 	                }
 
-	         		else if (travelPassType == DB && credit >= 12.0)
+	         		else if (travelPassType.equals("DB") && credit >= 12.0)
 
 	         		{
 
