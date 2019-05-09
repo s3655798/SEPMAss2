@@ -54,7 +54,8 @@ public class CincoTicketingSystemSprint2 {
 				
 				int findId = sc.nextInt();
 	            		
-	            		
+	            		//goes through Hashmap keys(peppep Ids) to find that unique ID values.
+				
 	            		for (Map.Entry<Integer, String> e : pepPepTicket.entrySet()) {
 	            		    int key = e.getKey();
 	            		    
@@ -93,7 +94,7 @@ public class CincoTicketingSystemSprint2 {
 		            		pepIdTestString = Integer.toString(pepIdTest);
 	            		}
 				
-				//STORE IN HASHMAP SOON TO BE ARRAY
+				//STORE IN HASHMAP SOON TO BE ARRAY?
 				pepPepTicket.put(pepIdTest, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass);
 	            		System.out.print("You pep-pep ticket ID is: ");
 	            		System.out.print(pepPepId);
