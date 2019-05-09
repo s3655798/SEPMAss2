@@ -28,7 +28,7 @@ public class CincoTicketingSystemSprint2 {
 	      double addCredit = 0.0;
 	      boolean pPtick = false;
 
-	      Map<String, String> pepMap = new HashMap<String, String>();
+	      Map<Integer, String> pepMap = new HashMap<>();
 
 	      
 
@@ -38,12 +38,9 @@ public class CincoTicketingSystemSprint2 {
 
 	      
 
-	      	pepMap.put("Id", Integer.toString(pepPepId)); //convert the pepPepId from int to string so it will actually store
+	      	pepMap.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass); //convert the pepPepId from int to string so it will actually store
 
-	        pepMap.put("Credit", Double.toString(credit)); //same here
-
-	        pepMap.put("Travel pass", travelPass); //I set this by default to "none"
-
+	    
 	        System.out.print("pep-pep ticket:");
 
 	        System.out.println(pepMap);
