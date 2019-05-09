@@ -79,12 +79,7 @@ public class CincoTicketingSystemSprint2 {
 
 
 
-	       /* pepMap.put("Credit", Double.toString(credit)); //same here
-
-
-
-	        pepMap.put("Travel pass", travelPass); //I set this by default to "none"
-*/
+	     
 
 
 	        System.out.print("pep-pep ticket:");
@@ -120,10 +115,6 @@ public class CincoTicketingSystemSprint2 {
 
 
 	         System.out.println("B - Purchase travel pass using pep-pep ticket");
-
-
-
-//	         System.out.println("C - Add credit");
 
 
 
@@ -285,94 +276,6 @@ public class CincoTicketingSystemSprint2 {
 			System.out.println(date.format(dateobj));
 
 
-
-			
-//
-//
-//
-//	          	if (credit >= 8) {
-//
-//
-//
-//		            		
-//
-//
-//
-//		            		
-//
-//
-//
-//		            		System.out.println("Bought new pep-pep");
-//
-//
-//
-//		            		
-//
-//
-//
-//		            		credit = credit - 8;
-//
-//
-//
-//					
-//
-//
-//
-//	
-//
-//		            		
-//
-//
-//
-//		            		System.out.println("Your new balance is " + credit);
-//
-//
-//
-//		            		System.out.println("Your pep-pep ticket ID is " + pepPepId);
-//
-//
-//
-//		            		
-//
-//
-//
-//		            		
-//
-//
-//
-//		            	}
-//
-//
-//
-//		               // code to buy Pep-Pep tickets with initial zero value for $8
-//
-//
-//
-//		            	
-//
-//
-//
-//		            	else if (credit == 0){
-//
-//
-//
-//				
-//
-//
-//
-//		            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
-//
-//
-//
-//			            System.out.println("Please first add credit. For cash payment, please credit atleast $8 in cash slot below");
-//
-//
-//
-//			            System.out.println("For card payment, please tap card to the right");
-//
-//
-//
-//			            
 
 
 
