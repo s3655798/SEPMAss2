@@ -59,7 +59,7 @@ public class CincoTicketingSystemSprint2 {
 
 	         System.out.println("B - Purchase travel pass using pep-pep ticket");
 
-	         System.out.println("C - Add credit");
+	         // System.out.println("C - Add credit");
 
 	         System.out.println("X - Exit");
 
@@ -125,18 +125,7 @@ public class CincoTicketingSystemSprint2 {
 
 			
 
-	          	if (credit >= 8) {
-
-		            		
-
-		            		
-
-		            		System.out.println("Bought new pep-pep");
-
-		            		
-
-		            		credit = credit - 8;
-
+	          	
 					
 
 	
