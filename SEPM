@@ -52,12 +52,22 @@ public class CincoTicketingSystemSprint2 {
 	            		System.out.println("What is your pep-pep ticket 6 digit ID?");
 				//NEEDS WORK TO FIND ID OF HASHMAP OR NEW ARRAY WHEN MADE
 				
-	            		String findId = sc.nextLine();
-	            		if (findId.equals(pepPepTicket.get(pepPepId))){
-	            		}
-	            		else {
-	            			System.out.println("invalid ID");
-	            		}
+				int findId = sc.nextInt();
+	            		
+	            		
+	            		for (Map.Entry<Integer, String> e : pepPepTicket.entrySet()) {
+	            		    int key = e.getKey();
+	            		    
+	            		    System.out.println(key);
+	            		    
+	            		    if (findId == key){	            			
+		            			System.out.println("found ID:" + pepPepTicket.get(pepPepId));
+		            		}
+		            		else {
+
+		            			System.out.println("invalid ID");
+		            		}
+	            		}			
 	            		break;
 	            	}
 	            	else
