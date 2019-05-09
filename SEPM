@@ -1,10 +1,17 @@
 import java.util.Scanner;
+
 import java.util.Date;
+
 import java.util.HashMap;
+
 import java.util.Map;
+
 import java.util.Random;
+
 import java.text.DateFormat;
+
 import java.text.SimpleDateFormat;
+
 
 
 public class CincoTicketingSystemSprint2 {
@@ -13,69 +20,146 @@ public class CincoTicketingSystemSprint2 {
 
 	public static void main(String[] args) {
 
+
+
 		// TODO Auto-generated method stub
+
+
+
+
 
 
 
 	      // Scanner used for keyboard input
 
+
+
 	      Scanner sc = new Scanner (System.in);
 
+
+
 	      String selection;
+
 	      double credit = 0;
+
 	      int pepPepId = 0;
+
 	      String travelPass = "None";      
+
 	      double addCredit = 0.0;
+
 	      boolean pPtick = false;
 
+
+
 	      Map<Integer, String> pepMap = new HashMap<>();
+	      
+	      
+	      
+
+
 
 	      
+
+
 
 	      do
 
+
+
 	      {
+
+
 
 	      
 
+
+
 	      	pepMap.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass); //convert the pepPepId from int to string so it will actually store
 
-	    
+
+
+	       /* pepMap.put("Credit", Double.toString(credit)); //same here
+
+
+
+	        pepMap.put("Travel pass", travelPass); //I set this by default to "none"
+*/
+
+
 	        System.out.print("pep-pep ticket:");
+
+
 
 	        System.out.println(pepMap);
 
+
+
 	         System.out.println("Cinco public transport ticketing system");
+
+
 
 	         System.out.println("--------------------------------------------");
 
+
+
 		 System.out.println("Credit:" + credit);
+
+
 
 	         System.out.println();
 
 
 
-	         System.out.println("A - Purchase a new pep-pep ticket");
+
+
+
+
+	         System.out.println("A - Purchase a new pep-pep ticket or add credit to existing pep-pep ticket");
+
+
 
 	         System.out.println("B - Purchase travel pass using pep-pep ticket");
 
-	         // System.out.println("C - Add credit");
+
+
+//	         System.out.println("C - Add credit");
+
+
 
 	         System.out.println("X - Exit");
 
+
+
 	         System.out.println();
+
+
 
 	         System.out.print("Please enter your selection here: ");
 
 
 
+
+
+
+
 	         selection = sc.nextLine();
+
+
 
 	         
 
+
+
 	         // make menu selection processing case-insensitive
 
+
+
 	         selection = selection.toUpperCase();
+
+
+
+
 
 
 
@@ -83,14 +167,24 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 			switch (selection)
+
+
 
 	         {
 
+
+
 	            case "A":
 
+
+
 	            	
-	            	
+
 	            	
 
 	            	System.out.println("Do you have an existing pep-pep ticket? (yes to add credit/no to first buy pep-pep ticket)");
@@ -193,189 +287,390 @@ public class CincoTicketingSystemSprint2 {
 
 
 			
+//
+//
+//
+//	          	if (credit >= 8) {
+//
+//
+//
+//		            		
+//
+//
+//
+//		            		
+//
+//
+//
+//		            		System.out.println("Bought new pep-pep");
+//
+//
+//
+//		            		
+//
+//
+//
+//		            		credit = credit - 8;
+//
+//
+//
+//					
+//
+//
+//
+//	
+//
+//		            		
+//
+//
+//
+//		            		System.out.println("Your new balance is " + credit);
+//
+//
+//
+//		            		System.out.println("Your pep-pep ticket ID is " + pepPepId);
+//
+//
+//
+//		            		
+//
+//
+//
+//		            		
+//
+//
+//
+//		            	}
+//
+//
+//
+//		               // code to buy Pep-Pep tickets with initial zero value for $8
+//
+//
+//
+//		            	
+//
+//
+//
+//		            	else if (credit == 0){
+//
+//
+//
+//				
+//
+//
+//
+//		            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
+//
+//
+//
+//			            System.out.println("Please first add credit. For cash payment, please credit atleast $8 in cash slot below");
+//
+//
+//
+//			            System.out.println("For card payment, please tap card to the right");
+//
+//
+//
+//			            
 
-	          	
-					
 
-	
-		            		
-
-		            		System.out.println("Your new balance is " + credit);
-
-		            		System.out.println("Your pep-pep ticket ID is " + pepPepId);
-
-		            		
-
-		            		
-
-		            	
-
-		               // code to buy Pep-Pep tickets with initial zero value for $8
-
-		            	
-
-		            	else if (credit == 0){
-
-				
-
-		            	System.out.println("You do not have enough credit to purchase a pep-pep ticket");
-
-			            System.out.println("Please first add credit. For cash payment, please credit atleast $8 in cash slot below");
-
-			            System.out.println("For card payment, please tap card to the right");
-
-			            
 
 			            System.out.println("Please enter amount you would like to credit your ticket: ");
 
 
 
+
+
+
+
 				         addCredit = sc.nextDouble();  
+
+
 
 		            	
 
-		            	}
 
-				         else if (addCredit % 5 == 0 & addCredit < 100) {
+
+		            	
+
+
+
+				         if (addCredit % 5 == 0 & addCredit < 100) {
+
+
 
 				        	 
+
+
 
 				        	 credit = credit + addCredit;
 
+
+
 				        	 
+
+
 
 				        	 System.out.println("total credit = " + credit);
 
+
+
 				        	
+
+
 
 				         }
 
+
+
 				         
+
+
 
 				         else {
+
 				        	 System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
 
+
+
 				         
+
+
 
 				         } 	
 
+
+
 				    
+
+
 
 			            break;
 
+
+
 		            
+
+
 
 				/****************************************************************************************   
 
+
+
 			     **************** this methodology not used but started***********************************
+
+
 
 			            
 
 
 
+
+
+
+
 				    private int uniqueID; //local unique ID variable
 
+
+
 	     
+
+
 
 	 			   public Counter() {  //this constructor sets counter to 0
 
+
+
 	 			     this.uniqueID = 0;
+
+
 
 	 
 
+
+
 	    			}
+
+
 
 	   			 
 
+
+
 	  			  public void increment(){   // this increments unique ID by 1 when implemented
+
+
 
 	      			  this.uniqueID ++;
 
-	  			  }
 
-	     
+
+	  			  }
 
 
 
 				    }
 
+
+
 				
+
+
 
 				***************************************************************************************/
 
+
+
 			
+
+
 
 		            case "B":
 
+
+
 		            	
+
+
 
 		            	String travelPassType;
 
+
+
 		            	double passPrice;
+
+
 
 		            	String HA = null;
 
+
+
 		            	String HB = null;
+
+
 
 		            	String DA = null;
 
+
+
 		            	String DB = null;
+
+
 
 		            	
 
+
+
 		            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
+
+
 
 		            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ */
 
+
+
 		                
+
+
 
 		   	         System.out.println("Select Travel Pass Type");
 
+
+
 			         System.out.println("--------------------------------------------");
 
+
+
 			         System.out.println();
+
+
+
+
 
 
 
 			         System.out.println("type 'HA' for 2 hours, Zone 1");
 
+
+
 			         System.out.println("type 'HB' for  2 hours, Zone 1 & Zone 2");
+
+
 
 			         System.out.println("type 'DA' for  All Day, Zone 1");
 
+
+
 			         System.out.println("type 'DB' for  All Day, Zone 1 & Zone 2");
 
+
+
 			         System.out.println();
+
+
 
 			         System.out.print("Please enter your Travel Pass Type here: ");
 
 
 
+
+
+
+
 			         travelPassType = sc.nextLine();
 
+
+
 			         
+
+
 
 			        // System.out.print("Please enter credit available on your ticket: ");
 
 
 
+
+
+
+
 			        // credit = sc.nextDouble();
+
+
 
 		            	
 
+
+
 			         /*Users need to have enough credit on their Pep-Pep ticket before they can 
+
+
 
 		            	 * purchase any travel passes. The prices of travel passes are as 
 
+
+
 		            	 * follows: 2 hour, zone 1: $3.50; 2 hour, zones 1 & 2: $6; All day, 
+
+
 
 		            	 * zone 1: $7; All day, zones 1 & 2: $12*/	
 
+
+
 				 
+
+
 
 				 // determine applicable pass type and required credit
 
+
+
 				if (travelPassType.equals("HA") && credit >= 3.5)
+
+
+
+
 
 
 
@@ -385,11 +680,21 @@ public class CincoTicketingSystemSprint2 {
 
 		                	passPrice = 3.50;
 
+
+
 		                	travelPass = "2 hours, zone 1";
 
 
 
+
+
+
+
 		                }
+
+
+
+
 
 
 
@@ -397,17 +702,35 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 		                {
+
+
+
+
 
 
 
 		                	passPrice = 6.00;
 
+
+
 		                	travelPass = "2 hours, zone 1 & 2";
 
 
 
+
+
+
+
 		                }
+
+
+
+
 
 
 
@@ -415,17 +738,35 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 		                {
+
+
+
+
 
 
 
 		                	passPrice = 7.00;
 
+
+
 		                	travelPass = "All day, zone 1";
 
 
 
+
+
+
+
 		                }
+
+
+
+
 
 
 
@@ -433,13 +774,27 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 		         		{
+
+
+
+
 
 
 
 		         		   passPrice = 12.00;
 
+
+
 		         		   travelPass = "All day, zone 1 & 2";
+
+
+
+
 
 
 
@@ -447,11 +802,23 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 		                else // Price will be zero
 
 
 
+
+
+
+
 		                {
+
+
+
+
 
 
 
@@ -459,172 +826,320 @@ public class CincoTicketingSystemSprint2 {
 
 
 
+
+
+
+
 		   		         System.out.println("You have insufficient funds to purchase a travel pass");
+
+
 
 		   		         System.out.println("Credit Available:" + credit);
 
+
+
 		   		         System.out.println("Travel pass price:" + passPrice);
+
+
 
 		                }
 
+
+
 		                
+
+
 
 		            	break;
 
 
 
+
+
+
+
 	/* superseded case B switch statement
+
+
 
 	            	String travelPass;
 
+
+
 		            	String travelPassType = null;
 
+
+
 		                
+
+
 
 		            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
 
+
+
 		            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ 
+
+
 
 		                
 
+
+
 		                switch (travelPassType)
+
+
 
 		                {
 
+
+
 		                   case "hourA":
+
+
 
 		                	   travelPass = "2 hours - Zone 1";
 
+
+
 		                      break;
 
+
+
 		                      
+
+
 
 		                   case "hourB":
 
+
+
 		                	   travelPass = "2 hours - Zone 1 & Zone 2";
+
+
 
 		                      break;
 
+
+
 		                      
+
+
 
 		                   case "allDayA":
 
+
+
 		                	   travelPass = "All Day - Zone 1";
 
+
+
 		                      break;
+
+
 
 		                      
 
+
+
 		                   case "allDayB":
+
+
 
 		                	   travelPass = "All Day - Zone 1 & Zone 2";
 
+
+
 		                      break;
 
+
+
 		                }
+
+
 
 	*/
 
 
 
+
 	/*	            case "C": section commented out during sprint 2, scrum catchup we realised this would be
+
+
 
 	 * better as if/else statement in Case A  */ 
 
 
 
+
+
+
+
 			               // code to load credit onto existing Pep-Pep tickets
+
+
 
 			               /*Pep-Pep tickets can only hold up to $100. 
 
+
+
 			               * Any attempt to add more than $100 credit causes an 
+
+
 
 			               * error message and the charge fails. Amounts to be 
 
+
+
 			               * credited to a Pep-Pep ticket must be in multiples of $5*/
 
+
+
 		            	
+
+
 
 	/*			         System.out.println("Please enter amount you would like to credit your ticket: ");
 
 
 
+
+
+
+
 				         double addCredit = sc.nextDouble();  
 
-					 
+
 
 					 
+
+
+
+					 
+
+
 
 					if (addCredit % 5 == 0 & addCredit < 100) {
 
+
+
 				        	 
+
+
 
 				        	 credit = credit + addCredit;
 
+
+
 				        	 
+
+
 
 				        	 System.out.println("total credit = " + credit);
 
+
+
 				        	
+
+
 
 				         }
 
+
+
 				         
+
+
 
 				         else { System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
 
-				         
+
 
 				         
+
+
+
+				         
+
+
 
 				         } 	
 
+
+
 			/*		 
+
+
 
 					 
 
+
+
 				         /* this is commented out during sprint 2, after realizing no need for a for loop
+
+
 
 				         for(int i = 0 ; i < 100; i++) { //Loop from 0 to 100
 
+
+
 				             if(i % 5 == 0 ) //check the number is divisible by 5
+
+
 
 				              System.out.println(i); //print the number if it is divisible by 5
 
+
+
 				        } */
+
+
 
 				         // research code to check if addCredit is in list created by for loop
 
+
+
 		            
+
+
 
 		            case "X":
 
+
+
 		               System.out.println("Exiting menu...");
+
+
 
 		               break;
 
 
 
+
+
+
+
 		            default:
+
+
 
 		               System.out.println("Error - Invalid menu selection!");
 
 
-
 		         }
+
+
 
 		         System.out.println();
 
+
+
 		      } while (!selection.equals("X"));
 
-		   
-
-
-
-			
 
 		}
 
 
-	}
+
+
 
