@@ -69,7 +69,7 @@ public class CincoTicketingSystemSprint2 {
 		            			System.out.println("invalid ID");
 		            		}
 	            		}			
-	            		break;
+	            		
 	            	}
 	            	else
 	            	{
