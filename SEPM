@@ -6,6 +6,7 @@ import java.util.Random;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 public class CincoTicketingSystemSprint2 {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	      // Scanner used for keyboard input
@@ -16,11 +17,17 @@ public class CincoTicketingSystemSprint2 {
 	      String travelPass = "None";      
 	      double addCredit = 0.0;
 	      boolean pPtick = false;
-	      Map<Integer, String> pepMap = new HashMap<>();
+	      
+	      Map<Integer, String> pepMap = new HashMap<>();	      
+	       //MAKE THIS AN ARRAY, WAY TOO COMPLICATED RIGHT NOW.
+	       
 	      do
 	      {
+	      
+	       //testing making a hashmap entry. key is the Id.
 	      	pepMap.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass); //convert the pepPepId from int to string so it will actually store
-	        System.out.print("pep-pep ticket:");
+	        
+		System.out.print("pep-pep ticket:");
 	        System.out.println(pepMap);
 	         System.out.println("Cinco public transport ticketing system");
 	         System.out.println("--------------------------------------------");
@@ -43,6 +50,8 @@ public class CincoTicketingSystemSprint2 {
 	            	if (peptick.equals("yes") || peptick.equals("YES")){
 	            		pPtick = true;
 	            		System.out.println("What is your pep-pep ticket 6 digit ID?");
+				//NEEDS WORK TO FIND ID OF HASHMAP OR NEW ARRAY WHEN MADE
+				
 	            		String findId = sc.nextLine();
 	            		if (findId.equals(pepMap.get(pepPepId))){
 	            		}
@@ -56,18 +65,25 @@ public class CincoTicketingSystemSprint2 {
 	            		System.out.println("A new pep-pep ticket is $8");
 				 System.out.println("For cash payment, please credit $8 in cash slot below");
 			        System.out.println("For card payment, please tap card to the right");
+				
+				 //ASSUME money is given and correct amount.
+
 	            		System.out.println("Money Accepted");
 	            		//creates random 6 digit ID
 	            		Random rando = new Random(); 
 	            		int pepIdTest = 100000 + rando.nextInt(900000); 
 	            		String pepIdTestString = Integer.toString(pepIdTest);
 	            		System.out.println(pepIdTestString);
-	            		//checks its not already in use
+				
+	            		//checks its not already in use, NEED WORK ON THIS, LOGIC OFF AND NEED MORE TIME TO LOOK INTO.
+	            		//NEEDS INCREMENT THROUGH HASH OR FUTURE ARRAY AND STORE.
 	            		while (pepIdTestString.equals(pepMap.get(pepPepId))){
 	            			System.out.println("match");
 		            		pepIdTest = 100000 + rando.nextInt(900000); 
 		            		pepIdTestString = Integer.toString(pepIdTest);
 	            		}
+				
+				//STORE IN HASHMAP SOON TO BE ARRAY
 				pepMap.put(pepIdTest, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass);
 	            		System.out.print("You pep-pep ticket ID is: ");
 	            		System.out.print(pepPepId);
@@ -78,6 +94,9 @@ public class CincoTicketingSystemSprint2 {
 		    	DateFormat date = new SimpleDateFormat("dd/MM/yy");
 			Date dateobj = new Date();
 			System.out.println(date.format(dateobj));
+			
+			//ADDING CREDIT TO EXISTING PEP TICK. NEEDS TO BE IN A LOOP OR IF STATEMENT SO IT ONLY ASKS AFTER HAVE A PEP?
+			
 			            System.out.println("Please enter amount you would like to credit your ticket: ");
 				         addCredit = sc.nextDouble();  
 				         if (addCredit % 5 == 0 & addCredit < 100) {
@@ -88,6 +107,7 @@ public class CincoTicketingSystemSprint2 {
 				        	 System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
 				         } 	
 			            break;
+				    
 				/****************************************************************************************   
 			     **************** this methodology not used but started***********************************
 				    private int uniqueID; //local unique ID variable
@@ -99,6 +119,9 @@ public class CincoTicketingSystemSprint2 {
 	  			  }
 				    }
 				***************************************************************************************/
+				
+				
+				
 		            case "B":
 		            	String travelPassType;
 		            	double passPrice;
@@ -125,6 +148,7 @@ public class CincoTicketingSystemSprint2 {
 		            	 * follows: 2 hour, zone 1: $3.50; 2 hour, zones 1 & 2: $6; All day, 
 		            	 * zone 1: $7; All day, zones 1 & 2: $12*/	
 				 // determine applicable pass type and required credit
+				 				 
 				if (travelPassType.equals("HA") && credit >= 3.5)
 		                {
 		                	passPrice = 3.50;
@@ -195,7 +219,6 @@ public class CincoTicketingSystemSprint2 {
 				             if(i % 5 == 0 ) //check the number is divisible by 5
 				              System.out.println(i); //print the number if it is divisible by 5
 				        } */
-				         // research code to check if addCredit is in list created by for loop
 		            case "X":
 		               System.out.println("Exiting menu...");
 		               break;
