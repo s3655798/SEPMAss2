@@ -91,37 +91,106 @@ public class CincoTicketingSystemSprint2 {
 
 	            	
 	            	
+	            	
+
 	            	System.out.println("Do you have an existing pep-pep ticket? (yes to add credit/no to first buy pep-pep ticket)");
+
 	            	
+
 	            	String peptick = sc.nextLine();
+
 	            	
+
 	            	
-	            	if (peptick == "yes"){
+
+	            	if (peptick.equals("yes") || peptick.equals("YES")){
+
 	            		
+
 	            		pPtick = true;
+
 	            		
+
 	            		System.out.println("What is your pep-pep ticket 6 digit ID?");
 	            		
-	            		int findId = sc.nextInt();
 	            		
+
 	            		
-	    
-	            		break;
+
+	            		String findId = sc.nextLine();
 	            		
-	            	}
 	            	
+	            		
+	            		if (findId.equals(pepMap.get(pepPepId))){
+	            			
+	            			
+	            		}
+	            		
+	            		else {
+	            			
+	            			System.out.println("invalid ID");
+	            		}
+	            		
+
+	    
+
+	            		break;
+
+	            		
+
+	            	}
+
+	            	
+
 	            	else
+
 	            	{
+
 	            		System.out.println("Insert $8 to buy new pep-pep ticket.");
+	            		System.out.println("Money accepted");
+	            		
+	            		
+	            		//creates random 6 digit ID
+	            		
+	            		
+	            		Random rando = new Random(); 
+	            		int pepIdTest = 100000 + rando.nextInt(900000); 
+	            		String pepIdTestString = Integer.toString(pepIdTest);
+	            		
+	            		System.out.println(pepIdTestString);
+	            		//checks its not already in use
+	            		
+	            		while (pepIdTestString.equals(pepMap.get(pepPepId))){
+	            			
+	            			System.out.println("match");
+	            	
+	            		
+
+	            		}
+	            		
+	            		System.out.print("You pep-pep ticket ID is: ");
+	            		System.out.print(pepPepId);
+	            		System.out.println();
+	            		System.out.print("Date of purchase: ");
+	            		
+
 	            	}
 
 		    	// get and print out todays date and store in date object
 
+
+
 		    	DateFormat date = new SimpleDateFormat("dd/MM/yy");
+
+
 
 			Date dateobj = new Date();
 
+
+
 			System.out.println(date.format(dateobj));
+
+
 
 			
 
@@ -139,7 +208,7 @@ public class CincoTicketingSystemSprint2 {
 
 		            		
 
-		            	}
+		            	
 
 		               // code to buy Pep-Pep tickets with initial zero value for $8
 
