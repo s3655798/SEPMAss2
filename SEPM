@@ -18,14 +18,14 @@ public class CincoTicketingSystemSprint2 {
 	      double addCredit = 0.0;
 	      boolean pPtick = false;
 	      
-	      Map<Integer, String> pepMap = new HashMap<>();	      
+	      Map<Integer, String> pepPepTicket = new HashMap<>();	      
 	       //MAKE THIS AN ARRAY, WAY TOO COMPLICATED RIGHT NOW.
 	       
 	      do
 	      {
 	      
 	       //testing making a hashmap entry. key is the Id.
-	      	pepMap.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass); //convert the pepPepId from int to string so it will actually store
+	      	pepPepTicket.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass); //convert the pepPepId from int to string so it will actually store
 	        
 		System.out.print("pep-pep ticket:");
 	        System.out.println(pepMap);
@@ -77,14 +77,14 @@ public class CincoTicketingSystemSprint2 {
 				
 	            		//checks its not already in use, NEED WORK ON THIS, LOGIC OFF AND NEED MORE TIME TO LOOK INTO.
 	            		//NEEDS INCREMENT THROUGH HASH OR FUTURE ARRAY AND STORE.
-	            		while (pepIdTestString.equals(pepMap.get(pepPepId))){
+	            		while (pepIdTestString.equals(pepPepTicket.get(pepPepId))){
 	            			System.out.println("match");
 		            		pepIdTest = 100000 + rando.nextInt(900000); 
 		            		pepIdTestString = Integer.toString(pepIdTest);
 	            		}
 				
 				//STORE IN HASHMAP SOON TO BE ARRAY
-				pepMap.put(pepIdTest, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass);
+				pepPepTicket.put(pepIdTest, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass);
 	            		System.out.print("You pep-pep ticket ID is: ");
 	            		System.out.print(pepPepId);
 	            		System.out.println();
