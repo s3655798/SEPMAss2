@@ -45,7 +45,7 @@ public class CincoTicketingSystemSprint2 {
 			switch (selection)
 	         {
 	            case "A":
-	            	System.out.println("Do you have an existing pep-pep ticket? (yes to add credit/no to first buy pep-pep ticket)");
+	            	System.out.println("Do you have an existing pep-pep ticket? ('yes' to add credit / 'no' to first buy pep-pep ticket)");
 	            	String peptick = sc.nextLine();
 	            	if (peptick.equals("yes") || peptick.equals("YES")){
 	            		pPtick = true;
