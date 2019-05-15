@@ -190,6 +190,7 @@ public class CincoTicketingSystemSprint2 {
 		   		         System.out.println("Credit Available:" + credit);
 		   		         System.out.println("Travel pass price:" + passPrice);
 		                }
+				credit = credit - passPrice;
 		            	break;
 	/* superseded case B switch statement
 	            	String travelPass;
