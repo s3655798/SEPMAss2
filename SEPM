@@ -17,6 +17,8 @@ public class CincoTicketingSystemSprint2 {
 	      String travelPass = "None";      
 	      double addCredit = 0.0;
 	      boolean pPtick = false;
+	      int tPId = 0;	      
+	      Random rando = new Random(); 
 	      
 	      Map<Integer, String> pepPepTicket = new HashMap<>();	      
 	       //MAKE THIS AN ARRAY, WAY TOO COMPLICATED RIGHT NOW.
@@ -81,7 +83,7 @@ public class CincoTicketingSystemSprint2 {
 
 	            		System.out.println("Money Accepted");
 	            		//creates random 6 digit ID
-	            		Random rando = new Random(); 
+	            		
 	            		int pepIdTest = 100000 + rando.nextInt(900000); 
 	            		String pepIdTestString = Integer.toString(pepIdTest);
 	            		System.out.println(pepIdTestString);
@@ -191,6 +193,37 @@ public class CincoTicketingSystemSprint2 {
 		   		         System.out.println("Travel pass price:" + passPrice);
 		                }
 				credit = credit - passPrice;
+				
+			// travelPass id***************************************
+
+        		int tPIdTest = 100000 + rando.nextInt(900000); 
+
+        		String tPIdTestString = Integer.toString(tPIdTest);
+
+        		System.out.println(tPIdTestString);
+        		
+        		//tp pass
+        		
+        		while (tPIdTestString.equals(pepPepTicket.get(tPId))){
+
+        			System.out.println("match");
+
+            		tPIdTest = 100000 + rando.nextInt(900000); 
+
+            		tPIdTestString = Integer.toString(tPIdTest);
+            		
+            		System.out.println(tPIdTestString);
+        		}
+        		
+        		tPId = Integer.parseInt(tPIdTestString);
+        		
+        		pepPepTicket.put(pepPepId, Integer.toString(pepPepId) + "," + Double.toString(credit) + "," + travelPass + "," + Integer.toString(tPId)); //convert the pepPepId from int to string so it will actually store
+
+        		
+        		
+
+        		//******************************
+       
 		            	break;
 	/* superseded case B switch statement
 	            	String travelPass;
