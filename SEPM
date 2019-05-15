@@ -294,3 +294,44 @@ public class CincoTicketingSystemSprint2 {
 		/***************************************code not used or changed***************************************/				
 				using date as a method did not work
 				//todayDate() {  }
+				
+				
+		/****************************************************************
+		****************************************************************/
+
+		// create a ticket array and numbers of objects in array
+		Ticket[] tickets = new Ticket[100];
+		int ticketCount = 0;
+
+ 		//  Helper method which displays Ticket details
+	
+		displayAllTickets()
+		{
+   		System.out.println("*** Display All tickets Feature ***");
+   		System.out.println();
+   
+   		// code for Stage 2 Requirement B) should go in here
+   		// ...
+
+   		// step through current tickets in attah and print their details
+  		 for (int i = 0; i < ticketCount; i++)
+  		 {
+     		 tickets[i].printDetails();
+  		 }
+
+		}
+
+ 		// Helper method which displays the details for tickets to the screen.
+
+		public void printDetails()
+		{
+	            		System.out.print("You pep-pep ticket ID is: ");
+	            		System.out.print(pepPepId);
+	            		System.out.println();
+	            		System.out.print("Date of purchase: ");
+				System.out.print(todayDate());
+   				System.out.println("------");
+			}
+
+		}
+		****************************************************************/
