@@ -113,15 +113,17 @@ public class CincoTicketingSystemSprint2 {
 			
 			//ADDING CREDIT TO EXISTING PEP TICK. NEEDS TO BE IN A LOOP OR IF STATEMENT SO IT ONLY ASKS AFTER HAVE A PEP?
 			
-			            System.out.println("Please enter amount you would like to credit your ticket: ");
+			    System.out.println("Please enter amount you would like to credit your ticket: ");
+
 				         addCredit = sc.nextDouble();  
-				         if (addCredit % 5 == 0 & addCredit < 100) {
+				         if (addCredit % 5 == 0 & addCredit < 100 & (addCredit + credit)< 100) {
 				        	 credit = credit + addCredit;
-				        	 System.out.println("total credit = " + credit);
+				        	 System.out.println("total credit = " + credit); 
 				         }
 				         else {
-				        	 System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
+				        	 System.out.println("Invalid amount- Must be in multiples of $5 and a pep-pep ticket can only hold less than $100.");
 				         } 	
+
 			            break;
 				    
 				/****************************************************************************************   
