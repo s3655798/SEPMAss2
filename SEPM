@@ -126,17 +126,7 @@ public class CincoTicketingSystemSprint2 {
 
 			            break;
 				    
-				/****************************************************************************************   
-			     **************** this methodology not used but started***********************************
-				    private int uniqueID; //local unique ID variable
-	 			   public Counter() {  //this constructor sets counter to 0
-	 			     this.uniqueID = 0;
-	    			}
-	  			  public void increment(){   // this increments unique ID by 1 when implemented
-	      			  this.uniqueID ++;
-	  			  }
-				    }
-				***************************************************************************************/
+
 				
 				
 				
@@ -279,3 +269,70 @@ public class CincoTicketingSystemSprint2 {
 		      } while (!selection.equals("X"));
 		}
 }
+
+
+
+/*****************************************************************************************************
+***************************************code not used or changed***************************************/
+
+/* superseded case B switch statement
+	            	String travelPass;
+		            	String travelPassType = null;
+		            	/*  Purchase travel pass for either ‘2 hours’ or ‘All day’ and 
+		            	 *  for either ‘Zone 1’ or ‘Zone 1’ & ‘Zone 2’ 
+		                switch (travelPassType)
+		                {
+		                   case "hourA":
+		                	   travelPass = "2 hours - Zone 1";
+		                      break;
+		                   case "hourB":
+		                	   travelPass = "2 hours - Zone 1 & Zone 2";
+		                      break;
+		                   case "allDayA":
+		                	   travelPass = "All Day - Zone 1";
+		                      break;
+		                   case "allDayB":
+		                	   travelPass = "All Day - Zone 1 & Zone 2";
+		                      break;
+		                }
+	*/
+          
+	
+	/***************************************code not used or changed***************************************/
+	
+	case "C": section commented out during sprint 2, scrum catchup we realised this would be
+	 * better as if/else statement in Case A  */ 
+			               // code to load credit onto existing Pep-Pep tickets
+			               /*Pep-Pep tickets can only hold up to $100. 
+			               * Any attempt to add more than $100 credit causes an 
+			               * error message and the charge fails. Amounts to be 
+			               * credited to a Pep-Pep ticket must be in multiples of $5*/
+	/*			         System.out.println("Please enter amount you would like to credit your ticket: ");
+				         double addCredit = sc.nextDouble();  
+					if (addCredit % 5 == 0 & addCredit < 100) {
+				        	 credit = credit + addCredit;
+				        	 System.out.println("total credit = " + credit);
+				         }
+				         else { System.out.println("Invalid amount- Must be in multiples of $5 and less than $100.");
+				         } 	
+					/*	
+					
+				         /* this is commented out during sprint 2, after realizing no need for a for loop
+				         for(int i = 0 ; i < 100; i++) { //Loop from 0 to 100
+				             if(i % 5 == 0 ) //check the number is divisible by 5
+				              System.out.println(i); //print the number if it is divisible by 5
+				        } */
+					
+		
+		/***************************************code not used or changed***************************************/
+		
+			     **************** this methodology started but not used***********************************
+				    private int uniqueID; //local unique ID variable
+	 			   public Counter() {  //this constructor sets counter to 0
+	 			     this.uniqueID = 0;
+	    			}
+	  			  public void increment(){   // this increments unique ID by 1 when implemented
+	      			  this.uniqueID ++;
+	  			  }
+				    }
+				***************************************************************************************/
